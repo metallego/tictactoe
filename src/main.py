@@ -62,7 +62,7 @@ class tictactoe():
         self.board_setup(board)
         while self.win_condition(board,who_goes) != True:
             p1_move = input('Which position would you like to take p1: ')
-            pos1 = p1_move - 1
+            pos1 = int(p1_move) - 1
             self.player_move(board,pos1,who_goes)
             self.print_board(board)
             if self.win_condition(board, who_goes):
@@ -71,7 +71,7 @@ class tictactoe():
             who_goes += 1
 
             p2_move = input('Which position would you like to take p2: ')
-            pos2 = p2_move - 1
+            pos2 = int(p2_move) - 1
             self.player_move(board,pos2,who_goes)
             self.print_board(board)
             if self.win_condition(board, who_goes):
